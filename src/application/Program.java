@@ -5,7 +5,6 @@ import java.util.List;
 
 import model.dao.DaoFactory;
 import model.dao.SellerDao;
-import model.dao.impl.SellerDaoJdbc;
 import model.entities.Department;
 import model.entities.Seller;
 
@@ -36,6 +35,13 @@ public class Program {
         Seller newSeller = new Seller(null, "Jean Pires", "Jean@gmail.com", new Date(), 4000.0, department);
         sellerDao.insert(newSeller);
         System.out.println("Inserted! New id = " + newSeller.getId());
+        
+        System.out.println("\n=== TEST 4 ===");
+        seller = sellerDao.findById(1);
+        seller.setName("Bruce Waine");
+        sellerDao.update(seller);
+        System.out.println("Update completed!");
 }
 
+	
 }
