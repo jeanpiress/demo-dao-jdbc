@@ -34,11 +34,11 @@ public class Program {
 			System.out.println(x);
 		}
 		
-		/*System.out.println("\n=== TEST 4 ===");
+		System.out.println("\n=== TEST 4 ===");
         Seller newSeller = new Seller(null, "Jean Pires", "Jean@gmail.com", new Date(), 4000.0, department);
         sellerDao.insert(newSeller);
         System.out.println("Inserted! New id = " + newSeller.getId());
-        */
+        
 		
         System.out.println("\n=== TEST 5 ===");
         seller = sellerDao.findById(1);
